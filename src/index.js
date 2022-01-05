@@ -1,4 +1,14 @@
-// import React from 'react';
+import React from "react";
+import ReactDOM from "react-dom";
+import { App } from "./components/App";
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+
 // import ReactDOM from 'react-dom';
 
 // const elem1 = <span>hello</span>
