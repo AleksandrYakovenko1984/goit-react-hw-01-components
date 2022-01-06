@@ -5,15 +5,15 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px solid black;
-  max-width: 900px;
-  height: 900px;
-  border-radius: 7px;
+
+  width: 100%;
+  min-height: 900px;
+  overflow: auto;
   background-color: #bbe6f0;
 `;
 export const Description = styled.div`
   padding: 50px 0 50px 0;
-  width: 420px;
+  min-width: 420px;
   display: flex;
   flex-direction: column;
   background-color: #ffffff;
@@ -28,8 +28,8 @@ export const Stats = styled.ul`
   display: flex;
   justify-content: space-around;
   background-color: #e9f5f7;
-  width: 420px;
-  height: 120px;
+  min-width: 420px;
+  min-height: 120px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
