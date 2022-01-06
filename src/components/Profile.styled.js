@@ -32,7 +32,7 @@ export const Stats = styled.ul`
   min-height: 120px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
-  box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 9px 9px 7px 2px rgba(0, 0, 0, 0.3);
 `;
 export const ImgAvatar = styled.img`
   border-radius: 100px; /* Радиус скругления */
