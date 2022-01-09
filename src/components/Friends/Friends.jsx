@@ -1,18 +1,19 @@
-import { FriendListContacts, Item } from "./Friends.styled";
+import {
+  FriendListContacts,
+  Item,
+  Status,
+  Avatar,
+  Name,
+} from "./Friends.styled";
 
-export default function FriendList({ friends }) {
+export default function FriendList({ friends, isOnline = false }) {
   return (
     <FriendListContacts>
       {friends.map((friend) => (
         <Item>
-          <span class="status">{friends.isOnline}</span>
-          <img
-            class="avatar"
-            src={friend.avatar}
-            alt="User avatar"
-            width="48"
-          />
-          <p class="name">{friend.name}</p>
+          <Status>{friends.isOnline}</Status>
+          <Avatar src={friend.avatar} alt="User avatar" width="48" />
+          <Name>{friend.name}</Name>
         </Item>
       ))}
     </FriendListContacts>
