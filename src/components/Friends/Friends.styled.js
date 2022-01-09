@@ -12,7 +12,8 @@ export const Item = styled.li`
   display: flex;
   align-items: center;
   &:hover {
-    background-color: yellow;
+    background-color: #b2d6f7;
+    box-shadow: 12px 12px 10px 4px rgba(0, 0, 0, 0.5);
   }
 `;
 export const Status = styled.span`
@@ -26,7 +27,7 @@ export const Status = styled.span`
   }
 `;
 export const Avatar = styled.img`
-  outline: 2px solid red;
+  outline: 2px solid #78adde;
   border-radius: 6px;
   margin: 0 10px 0 10px;
 `;

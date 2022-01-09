@@ -4,9 +4,9 @@ export const StatisticsSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  margin-top: 40px;
   max-width: 350px;
-  outline: 1px solid tomato;
+  box-shadow: 9px -10px 7px 2px rgba(0, 0, 0, 0.5);
 `;
 
 export const Title = styled.h2`
@@ -30,7 +30,7 @@ export const Item = styled.li`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  outline: 1px solid red;
+  outline: 1px solid #ffffff;
 `;
 
 export const Label = styled.span`
