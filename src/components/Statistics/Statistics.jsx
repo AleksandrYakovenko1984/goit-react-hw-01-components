@@ -8,7 +8,6 @@ import {
 } from "./Statistics.styled";
 
 export default function Statistics({ title, stats }) {
-  console.log(stats);
   return (
     <StatisticsSection>
       <Title>{title}</Title>

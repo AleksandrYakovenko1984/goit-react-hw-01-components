@@ -9,7 +9,6 @@ import {
 } from "./Transactions.styled";
 
 export default function TransactionHistory({ items }) {
-  console.log(items);
   return (
     <TransactionHistoryTable>
       <HeaderContainer>

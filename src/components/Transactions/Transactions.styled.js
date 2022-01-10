@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const TransactionHistoryTable = styled.table`
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
 `;
 
 export const HeaderContainer = styled.thead``;

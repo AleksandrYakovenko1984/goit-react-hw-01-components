@@ -7,7 +7,6 @@ import {
 } from "./Friends.styled";
 
 export default function FriendList({ friends }) {
-  console.log(friends[1].isOnline);
   return (
     <FriendListContacts>
       {friends.map((friend) => (

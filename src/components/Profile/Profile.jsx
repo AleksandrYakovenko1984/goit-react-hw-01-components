@@ -15,7 +15,7 @@ export default function Profile({ avatar, username, tag, location, stats }) {
   return (
     <Container>
       <Description>
-        <ImgAvatar src={avatar} alt="User avatar" class="avatar" />
+        <ImgAvatar src={avatar} alt="User avatar" />
         <Name>{username}</Name>
         <Tag>@{tag}</Tag>
         <Location>{location}</Location>
