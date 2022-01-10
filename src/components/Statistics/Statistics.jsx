@@ -15,7 +15,7 @@ export default function Statistics({ title, stats }) {
 
       <StatList>
         {stats.map((el) => (
-          <Item>
+          <Item className={el.percentage > 17 ? "green" : "red"}>
             <Label>{el.label}</Label>
             <Percentage>{el.percentage} %</Percentage>
           </Item>

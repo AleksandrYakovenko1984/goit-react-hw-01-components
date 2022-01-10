@@ -35,9 +35,9 @@ export const Stats = styled.ul`
   box-shadow: 9px 9px 7px 2px rgba(0, 0, 0, 0.3);
 `;
 export const ImgAvatar = styled.img`
-  border-radius: 100px; /* Радиус скругления */
-  border: 3px solid gray; /* Параметры рамки */
-  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  border-radius: 100px;
+  border: 3px solid gray;
+  box-shadow: 4px 4px 2px 1px rgba(0, 0, 0, 0.3);
   width: 200px;
   margin-bottom: 50px;
   /* width: auto;
@@ -68,10 +68,6 @@ export const Item = styled.li`
   align-items: center;
 
   padding: 0 15px;
-  &::after {
-    content: " ";
-    border-right: 1px solid #000;
-  }
 `;
 
 export const Label = styled.span`

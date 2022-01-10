@@ -22,7 +22,7 @@ export default function TransactionHistory({ items }) {
 
       <TransactionContainer>
         {items.map((item) => (
-          <TableStroke>
+          <TableStroke key={item.id}>
             <TableItem>{item.type}</TableItem>
             <TableItem>{item.amount}</TableItem>
             <TableItem>{item.currency}</TableItem>

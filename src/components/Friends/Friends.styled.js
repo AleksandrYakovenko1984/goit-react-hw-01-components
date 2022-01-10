@@ -17,19 +17,24 @@ export const Item = styled.li`
   }
 `;
 export const Status = styled.span`
-  &::before {
-    content: " ";
-    background-color: red;
+  & {
     width: 20px;
     height: 20px;
     display: block;
     border-radius: 100%;
   }
+  &.green {
+    background-color: green;
+  }
+  &.red {
+    background-color: red;
+  }
 `;
 export const Avatar = styled.img`
-  outline: 2px solid #78adde;
+  outline: 1px solid #fff;
   border-radius: 6px;
   margin: 0 10px 0 10px;
+  box-shadow: 9px 9px 7px 2px rgba(0, 0, 0, 0.3);
 `;
 export const Name = styled.p`
   font-size: 22px;
