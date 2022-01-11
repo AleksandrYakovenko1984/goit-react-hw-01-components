@@ -6,6 +6,7 @@ import {
   Label,
   Percentage,
 } from "./Statistics.styled";
+import PropTypes from "prop-types";
 
 export default function Statistics({ title, stats }) {
   return (
@@ -13,13 +14,24 @@ export default function Statistics({ title, stats }) {
       <Title>{title}</Title>
 
       <StatList>
-        {stats.map((el) => (
-          <Item className={el.percentage > 17 ? "green" : "red"}>
-            <Label>{el.label}</Label>
-            <Percentage>{el.percentage} %</Percentage>
+        {stats.map(({ id, label, percentage }) => (
+          <Item key={id} className={percentage > 17 ? "green" : "red"}>
+            <Label>{label}</Label>
+            <Percentage>{percentage} %</Percentage>
           </Item>
         ))}
       </StatList>
     </StatisticsSection>
   );
 }
+
+Statistics.propTypes = {
+  isOpen: PropTypes.bool,
+  searchable: PropTypes.bool,
+  options: PropTypes.arrayOf(
+    PropTypes.exact({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

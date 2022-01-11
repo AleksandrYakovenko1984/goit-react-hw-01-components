@@ -10,8 +10,15 @@ import {
   Label,
   Quantity,
 } from "./Profile.styled";
+import PropTypes from "prop-types";
 
-export default function Profile({ avatar, username, tag, location, stats }) {
+export default function Profile({
+  avatar,
+  username,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) {
   return (
     <Container>
       <Description>
@@ -24,17 +31,28 @@ export default function Profile({ avatar, username, tag, location, stats }) {
       <Stats>
         <Item>
           <Label>Followers</Label>
-          <Quantity>{stats.followers}</Quantity>
+          <Quantity>{followers}</Quantity>
         </Item>
         <Item>
           <Label>Views</Label>
-          <Quantity>{stats.views}</Quantity>
+          <Quantity>{views}</Quantity>
         </Item>
         <Item>
           <Label>Likes</Label>
-          <Quantity>{stats.likes}</Quantity>
+          <Quantity>{likes}</Quantity>
         </Item>
       </Stats>
     </Container>
   );
 }
+
+Profile.propTypes = {
+  isOpen: PropTypes.bool,
+  searchable: PropTypes.bool,
+  options: PropTypes.arrayOf(
+    PropTypes.exact({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

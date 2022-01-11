@@ -7,6 +7,7 @@ import {
   TableStroke,
   TableItem,
 } from "./Transactions.styled";
+import PropTypes from "prop-types";
 
 export default function TransactionHistory({ items }) {
   return (
@@ -20,14 +21,25 @@ export default function TransactionHistory({ items }) {
       </HeaderContainer>
 
       <TransactionContainer>
-        {items.map((item) => (
-          <TableStroke key={item.id}>
-            <TableItem>{item.type}</TableItem>
-            <TableItem>{item.amount}</TableItem>
-            <TableItem>{item.currency}</TableItem>
+        {items.map(({ id, type, amount, currency }) => (
+          <TableStroke key={id}>
+            <TableItem>{type}</TableItem>
+            <TableItem>{amount}</TableItem>
+            <TableItem>{currency}</TableItem>
           </TableStroke>
         ))}
       </TransactionContainer>
     </TransactionHistoryTable>
   );
 }
+
+TransactionHistory.propTypes = {
+  isOpen: PropTypes.bool,
+  searchable: PropTypes.bool,
+  options: PropTypes.arrayOf(
+    PropTypes.exact({
+      value: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

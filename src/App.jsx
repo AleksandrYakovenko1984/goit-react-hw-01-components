@@ -1,9 +1,9 @@
 import { GlobalStyle } from "./components/GlobalStyles";
 
-import user from "./components/user.json";
-import data from "./components/data.json";
-import friends from "./components/friends.json";
-import transactions from "./components/transactions.json";
+import user from "./components/Data/user.json";
+import data from "./components/Data/data.json";
+import friends from "./components/Data/friends.json";
+import transactions from "./components/Data/transactions.json";
 
 import Profile from "./components/Profile/Profile";
 import Statistics from "./components/Statistics/Statistics";
